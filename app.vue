@@ -1,5 +1,16 @@
+<script setup lang="ts">
+
+</script>
+
 <template>
   <div>
-    <NuxtWelcome />
+    <SectionContainer>
+      <SectionHero />
+      <!-- <SectionNews /> -->
+    </SectionContainer>
   </div>
 </template>
+
+<style lang = "scss" module>
+
+</style>

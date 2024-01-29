@@ -11,28 +11,19 @@ $minViewport: 740;
 :root {
   // COLOR
   --black           : #13191B;
-  --light-black     : #656C6E ;
-  --darkgray        : #939899;
-  --lightgray       : #f6f6f6;
+  --darkgray        : #707070;
+  --lightgray       : #dddddd;
   --white           : #ffffff;
-  --blue            : #4871A9 ;
-  --lightblue       : #70bdd3;
-  --skyblue         : #2f9bcd;
-  --green            : #8ec09e;
+  --blue            : #004ea2;
+  --lightblue       : #0074db;
   --base-color       : var(--lightgray);
-  --main-color       : var(--white);
-  --text-color       : var(--black);
-  --light-text-color : var(--light-black);
-  --facebook-color   : var(--blue);
-  --twitter-color    : var(--lightblue);
-  --bookmark-color   : var(--skyblue);
-  --line-color       : var(--green);
+  --main-color       : var(--lightblue);
+  --text-color       : var(--white);
   --hover-color      : var(--black);
   --overlay-color    : #3e3e41cc;
   --shadow-color     : #0c0d0d1a;
   --box-shadow       : 0 0 4px 1px var(--shadow-color);
   --pale-opacity     : .65;
-  --transparent-color: #ffffff66;
   
   // FONT
   --fs-medium            : #{calcClamp(14, 16, $minViewport, $maxViewport)};
@@ -42,13 +33,18 @@ $minViewport: 740;
   --fs-small             : #{calcClamp(12, 14, $minViewport, $maxViewport)};
   --fs-smaller           : #{calcClamp(11, 12, $minViewport, $maxViewport)};
   --fs-min               : 10px;
-  --fs-about-page        : #{calcClamp(18, 20, $minViewport, $maxViewport)};
   --line-height-tight    : 1.12;
   --line-height-narrow   : 1.4;
   --line-height-normal   : 1.6;
   --letter-spacing-wide  : 1em;
   --letter-spacing-normal: .08em;
   --letter-spacing-narrow: .04em;
+  //font custom
+  --fs-base-text         : #{calcClamp(11, 12, $minViewport, $maxViewport)};
+  --fs-heading-jp  : #{calcClamp(11, 12, $minViewport, $maxViewport)};
+  --fs-heading-en  : #{calcClamp(11, 12, $minViewport, $maxViewport)};
+  --fs-lead        : #{calcClamp(11, 12, $minViewport, $maxViewport)};
+  --fs-small-text        : #{calcClamp(7, 8, $minViewport, $maxViewport)};
 
   // VALUE
   --bv                   : #{calcClamp(6, 8, $minViewport, $maxViewport)};
