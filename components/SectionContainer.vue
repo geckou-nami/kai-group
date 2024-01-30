@@ -5,7 +5,7 @@
 <template>
   <div :class="$style.container">
     こまっています
-
+    <slot />
   </div>
 </template>
 

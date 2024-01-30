@@ -5,6 +5,7 @@
 <template>
   <div>
     <SectionContainer>
+      あああ
       <SectionHero />
       <!-- <SectionNews /> -->
     </SectionContainer>
