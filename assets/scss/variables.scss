@@ -33,18 +33,20 @@ $minViewport: 740;
   --fs-small             : #{calcClamp(12, 14, $minViewport, $maxViewport)};
   --fs-smaller           : #{calcClamp(11, 12, $minViewport, $maxViewport)};
   --fs-min               : 10px;
-  --line-height-tight    : 1.12;
+  --line-height-tight    : 1.2;
   --line-height-narrow   : 1.4;
   --line-height-normal   : 1.6;
+  --line-height-wide     : 1.2;
   --letter-spacing-wide  : 1em;
   --letter-spacing-normal: .08em;
   --letter-spacing-narrow: .04em;
   //font custom
-  --fs-base-text         : #{calcClamp(11, 12, $minViewport, $maxViewport)};
-  --fs-heading-jp  : #{calcClamp(11, 12, $minViewport, $maxViewport)};
-  --fs-heading-en  : #{calcClamp(11, 12, $minViewport, $maxViewport)};
-  --fs-lead        : #{calcClamp(11, 12, $minViewport, $maxViewport)};
-  --fs-small-text        : #{calcClamp(7, 8, $minViewport, $maxViewport)};
+  --fs-heading-jp: #{calcClamp(54, 56, $minViewport, $maxViewport)};
+  --fs-heading-en: #{calcClamp(106, 108, $minViewport, $maxViewport)};
+  --fs-lead      : #{calcClamp(16, 18, $minViewport, $maxViewport)};
+  --fs-lead-span : #{calcClamp(44, 46, $minViewport, $maxViewport)};
+  --fs-base-text : #{calcClamp(12, 14, $minViewport, $maxViewport)};
+  --fs-small-text: #{calcClamp(8, 10, $minViewport, $maxViewport)};
 
   // VALUE
   --bv                   : #{calcClamp(6, 8, $minViewport, $maxViewport)};

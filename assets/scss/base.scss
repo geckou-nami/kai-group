@@ -9,9 +9,9 @@ html {
 
 body {
   min-height           : 100dvh;
-  background-color: var(--blue);
+  background-color: var(--lightblue);
   color                : var(--text-color);
-  font-family          : 'Helvetica Neue', 'Arial', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'BIZ UDPGothic', 'Yu Gothic', sans-serif;
+  font-family          : 'Yu Gothic','YuGothic','Helvetica Neue', 'Arial',  'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'BIZ UDPGothic', sans-serif;
   font-size            : var(--fs-medium);
   line-height          : var(--line-height-normal);
   letter-spacing       : var(--letter-spacing-normal);
@@ -19,6 +19,48 @@ body {
   font-feature-settings: 'palt';
   leading-trim         : both;
 }
+
+//kai-groupのオリジナル
+.heading_en {
+  font-size     : var(--fs-heading-en);
+  letter-spacing: var(--letter-spacing-normal);
+  line-height   : var(--line-height-tight);
+}
+
+.heading_jp {
+  font-size     : var(--fs-heading-jp);
+  letter-spacing: var(--letter-spacing-normal);
+  line-height   : var(--line-height-narrow);
+  margin-bottom : var(--sp-large);
+}
+
+.lead_sentence {
+  font-size    : var(--fs-lead);
+  font-weight  : bold;
+  margin-bottom: var(--sp-large);
+
+  span {
+    font-size: var(--fs-lead-span);
+    margin-top: calc(var(--sp-large) * 1.5);
+  }
+}
+
+.section_text {
+  font-size     : var(--fs-base-text);
+  letter-spacing: var(--letter-spacing-normal);
+  margin-bottom : var(--sp-large);
+}
+
+.info_text {
+  font-size: var(--fs-small-text);
+}
+
+.text_content {
+  width       : 550px;
+  column-count: 2;
+  column-width: 200px;
+}
+// ここまで
 
 p {
   margin : 0;

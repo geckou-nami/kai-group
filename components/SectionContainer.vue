@@ -4,7 +4,6 @@
 
 <template>
   <div :class="$style.container">
-    こまっています
     <slot />
   </div>
 </template>
@@ -13,5 +12,6 @@
 .container {
   width:100%;
   padding: 0 70px;
+  background-color: cadetblue;
 }
 </style>

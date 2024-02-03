@@ -5,9 +5,10 @@
 <template>
   <div>
     <SectionContainer>
-      あああ
-      <SectionHero />
-      <!-- <SectionNews /> -->
+      <!-- <SectionHero /> -->
+      <SectionPlasticToPaper />
+      <SectionGenderFreeDesign />
+      <SectionNewChoices />
     </SectionContainer>
   </div>
 </template>

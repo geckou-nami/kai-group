@@ -7,7 +7,7 @@
   --lightblue: #0074db;
   --base-color: var(--lightgray);
   --main-color: var(--lightblue);
-  --text-color: var(--darkgray);
+  --text-color: var(--white);
   --hover-color: var(--black);
   --overlay-color: #3e3e41cc;
   --shadow-color: #0c0d0d1a;
@@ -20,17 +20,19 @@
   --fs-small: clamp(0.75rem, 0.6178571429rem + 0.2857142857vw, 0.875rem);
   --fs-smaller: clamp(0.6875rem, 0.6214285714rem + 0.1428571429vw, 0.75rem);
   --fs-min: 10px;
-  --line-height-tight: 1.12;
+  --line-height-tight: 1.2;
   --line-height-narrow: 1.4;
   --line-height-normal: 1.6;
+  --line-height-wide: 1.2;
   --letter-spacing-wide: 1em;
   --letter-spacing-normal: .08em;
   --letter-spacing-narrow: .04em;
-  --fs-base-text: clamp(0.6875rem, 0.6214285714rem + 0.1428571429vw, 0.75rem);
-  --fs-heading-jp: clamp(0.6875rem, 0.6214285714rem + 0.1428571429vw, 0.75rem);
-  --fs-heading-en: clamp(0.6875rem, 0.6214285714rem + 0.1428571429vw, 0.75rem);
-  --fs-lead: clamp(0.6875rem, 0.6214285714rem + 0.1428571429vw, 0.75rem);
-  --fs-small-text: clamp(0.4375rem, 0.3714285714rem + 0.1428571429vw, 0.5rem);
+  --fs-heading-jp: clamp(3.375rem, 3.2428571429rem + 0.2857142857vw, 3.5rem);
+  --fs-heading-en: clamp(6.625rem, 6.4928571429rem + 0.2857142857vw, 6.75rem);
+  --fs-lead: clamp(1rem, 0.8678571429rem + 0.2857142857vw, 1.125rem);
+  --fs-lead-span: clamp(2.75rem, 2.6178571429rem + 0.2857142857vw, 2.875rem);
+  --fs-base-text: clamp(0.75rem, 0.6178571429rem + 0.2857142857vw, 0.875rem);
+  --fs-small-text: clamp(0.5rem, 0.3678571429rem + 0.2857142857vw, 0.625rem);
   --bv: clamp(0.375rem, 0.2428571429rem + 0.2857142857vw, 0.5rem);
   --sp: clamp(0.375rem, 0.2428571429rem + 0.2857142857vw, 0.5rem);
   --sp-larger: calc(var(--sp) * 8);
@@ -62,15 +64,56 @@ html {
 
 body {
   min-height: 100dvh;
-  background-color: var(--blue);
+  background-color: var(--lightblue);
   color: var(--text-color);
-  font-family: "Helvetica Neue", "Arial", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", "Yu Gothic", sans-serif;
+  font-family: "Yu Gothic", "YuGothic", "Helvetica Neue", "Arial", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", sans-serif;
   font-size: var(--fs-medium);
   line-height: var(--line-height-normal);
   letter-spacing: var(--letter-spacing-normal);
   word-wrap: break-word;
   font-feature-settings: "palt";
   leading-trim: both;
+}
+
+.heading_en {
+  font-size: var(--fs-heading-en);
+  letter-spacing: var(--letter-spacing-normal);
+  line-height: var(--line-height-tight);
+}
+
+.heading_jp {
+  font-size: var(--fs-heading-jp);
+  letter-spacing: var(--letter-spacing-normal);
+  line-height: var(--line-height-narrow);
+  margin-bottom: var(--sp-large);
+}
+
+.lead_sentence {
+  font-size: var(--fs-lead);
+  font-weight: bold;
+  margin-bottom: var(--sp-large);
+}
+.lead_sentence span {
+  font-size: var(--fs-lead-span);
+  margin-top: calc(var(--sp-large) * 1.5);
+}
+
+.section_text {
+  font-size: var(--fs-base-text);
+  letter-spacing: var(--letter-spacing-normal);
+  margin-bottom: var(--sp-large);
+}
+
+.info_text {
+  font-size: var(--fs-small-text);
+}
+
+.text_content {
+  width: 550px;
+  -moz-column-count: 2;
+       column-count: 2;
+  -moz-column-width: 200px;
+       column-width: 200px;
 }
 
 p {
