@@ -3,8 +3,8 @@
 </script> -->
 
 <template>
-  <div :class="$style.plastic_paper_container">
-    <div :class="$style.plastic_paper_img">
+  <div :class="$style.promotion1_container">
+    <div :class="$style.promotion1_img">
       <img 
         src="assets/images/sec1-img.jpg"
         alt="イメージ画像"
@@ -46,7 +46,7 @@
 </template>
 
 <style lang = "scss" module>
-.plastic_paper_container {
+.promotion1_container {
   width           : 100%;
   height: 100%;
   background-color: var(--lightgray);
@@ -54,7 +54,7 @@
   overflow: hidden;
 }
 
-.plastic_paper_img {
+.promotion1_img {
   position    : absolute;
   right       : 50%;
   margin-right: -232px;

@@ -6,9 +6,11 @@
   <div>
     <SectionContainer>
       <!-- <SectionHero /> -->
-      <SectionPlasticToPaper />
-      <SectionGenderFreeDesign />
-      <SectionNewChoices />
+      <SectionPromotion1 />
+      <SectionPromotion2 />
+      <SectionSetupGuide />
+      <SectionPromotion3 />
+      <SectionFooter />
     </SectionContainer>
   </div>
 </template>

@@ -3,8 +3,8 @@
 </script> -->
 
 <template>
-  <div :class="$style.plastic_paper_container">
-    <!-- <div :class="$style.plastic_paper_img">
+  <div :class="$style.promotion3_container">
+    <!-- <div :class="$style.promotion3_img">
       <img 
         src="assets/images/sec1-img.jpg"
         alt="イメージ画像"
@@ -45,15 +45,15 @@
 </template>
 
 <style lang = "scss" module>
-.plastic_paper_container {
+.promotion3_container {
   width           : 100%;
   height          : 100%;
   position        : relative;
   overflow        : hidden;
-  background-color: var(--lightblue);
+  background-color: var(--lightgray);
 }
 
-.plastic_paper_img {
+.promotion3_img {
   position    : absolute;
   right       : 50%;
   margin-right: -232px;
@@ -74,12 +74,12 @@
 }
 
 .heading_wrapper {
-  opacity: 0.15;
   position   : absolute;
-  margin-left: calc(var(--sp-large) * 2);
+  margin-left: calc(var(--sp-large) * -2);
 }
 
 .text_wrapper {
+  color         : var(--blue);
   position      : absolute;
   bottom        : 0;
   padding-bottom: calc(var(--sp-large) * 4);
