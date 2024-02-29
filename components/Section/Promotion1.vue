@@ -49,7 +49,7 @@
 .promotion1_container {
   width           : 100%;
   height: 100%;
-  background-color: var(--lightgray);
+  background-color: var(--gray);
   position        : relative;
   overflow: hidden;
 }

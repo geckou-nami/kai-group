@@ -1,7 +1,8 @@
 :root {
   --black: #13191B;
   --darkgray: #707070;
-  --lightgray: #dddddd;
+  --gray: #dddddd;
+  --lightgray: #F5F5F5;
   --white: #ffffff;
   --blue: #004ea2;
   --lightblue: #0074db;
@@ -27,6 +28,10 @@
   --letter-spacing-wide: 1em;
   --letter-spacing-normal: .08em;
   --letter-spacing-narrow: .04em;
+  --fs-hero-title: clamp(3.75rem, 3.6178571429rem + 0.2857142857vw, 3.875rem);
+  --fs-hero-lead: clamp(0.875rem, 0.7428571429rem + 0.2857142857vw, 1rem);
+  --fs-hero-heading: clamp(1.5rem, 1.3678571429rem + 0.2857142857vw, 1.625rem);
+  --fs-hero-text: clamp(0.75rem, 0.6178571429rem + 0.2857142857vw, 0.875rem);
   --fs-heading-jp: clamp(3.375rem, 3.2428571429rem + 0.2857142857vw, 3.5rem);
   --fs-heading-en: clamp(6.625rem, 6.4928571429rem + 0.2857142857vw, 6.75rem);
   --fs-lead: clamp(1rem, 0.8678571429rem + 0.2857142857vw, 1.125rem);

@@ -23,19 +23,19 @@
 
 <style lang = "scss" module>
 .setup_guide_container {
-  max-width: 760px;
-  height: 100vh;
+  max-width       : 760px;
+  height          : 100vh;
   background-color: var(--white);
-  padding: calc(var(--sp-large) * 4) 0;
-  margin: 0 auto;
+  padding         : calc(var(--sp-large) * 4) 0;
+  margin          : 0 auto;
 }
 
 .heading_jp {
-  font-size     : var(--fs-heading-jp);
-  letter-spacing: var(--letter-spacing-normal);
-  line-height   : var(--line-height-narrow);
-  color: var( --darkgray);
-  text-align: center;
+font-size     : var(--fs-heading-jp);
+letter-spacing: var(--letter-spacing-normal);
+line-height   : var(--line-height-narrow);
+color         : var( --darkgray);
+text-align    : center;
 }
 
 .setup_guide_content {

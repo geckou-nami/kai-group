@@ -4,12 +4,12 @@
 
 <template>
   <div :class="$style.promotion3_container">
-    <!-- <div :class="$style.promotion3_img">
+    <div :class="$style.promotion3_img">
       <img 
-        src="assets/images/sec1-img.jpg"
+        src="assets/images/sec4-img.jpg"
         alt="イメージ画像"
       >
-    </div> -->
+    </div>
     <div :class="$style.section_contents">
       <h2 
         class="heading_en"
@@ -50,15 +50,15 @@
   height          : 100%;
   position        : relative;
   overflow        : hidden;
-  background-color: var(--lightgray);
+  background-color: var(--gray);
 }
 
 .promotion3_img {
-  position    : absolute;
-  right       : 50%;
-  margin-right: -232px;
-  top         : -115px;
-  width       : 1100px;
+  position: absolute;
+  left: 50%;
+  margin-left: -260px;
+  top: -115px;
+  width: 1100px;
 
   > img {
     width: 100%;

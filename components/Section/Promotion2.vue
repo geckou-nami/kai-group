@@ -4,12 +4,6 @@
 
 <template>
   <div :class="$style.promotion2_container">
-    <!-- <div :class="$style.promotion2_img">
-      <img 
-        src="assets/images/sec1-img.jpg"
-        alt="イメージ画像"
-      >
-    </div> -->
     <div :class="$style.section_contents">
       <h2 
         class="heading_en"
@@ -37,6 +31,12 @@
         </div>
       </div>
     </div>
+    <div :class="$style.promotion2_img">
+      <img 
+        src="assets/images/sec2-img.jpg"
+        alt="イメージ画像"
+      >
+    </div>
   </div>
 </template>
 
@@ -50,11 +50,11 @@
 }
 
 .promotion2_img {
-  position    : absolute;
-  right       : 50%;
-  margin-right: -232px;
-  top         : -115px;
-  width       : 1100px;
+  position: absolute;
+  left: 50%;
+  margin-left: -230px;
+  top: -117px;
+  width: 1100px;
 
   > img {
     width: 100%;
