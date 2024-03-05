@@ -42,6 +42,9 @@
         </p>
       </div>
     </div>
+    <SectionHeading 
+      :heading="'01 PLASTIC TO PAPER'"
+    />
   </div>
 </template>
 

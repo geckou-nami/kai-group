@@ -52,6 +52,9 @@ const limitedArticles = computed(() => {
       :class="$style.link_button"
       @click="showAllArticles"
     />
+    <SectionHeading 
+      :heading="'03  NEWS'"
+    />
   </div>
 </template>
 

@@ -7,7 +7,7 @@ const articles = await fetch('/json/news.json').then(res => res.json())
 <template>
   <SectionHero />
   <!-- <SectionContainer> -->
-    <SectionHeading />
+  <SectionHeading />
   <SectionPromotion1 />
   <SectionPromotion2 />
   <SectionNews 

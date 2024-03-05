@@ -37,6 +37,9 @@
         alt="イメージ画像"
       >
     </div>
+    <SectionHeading 
+      :heading="'02 GENDER FREE DESIGN'"
+    />
   </div>
 </template>
 

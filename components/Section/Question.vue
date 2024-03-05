@@ -73,6 +73,9 @@ const toggleMenu = (index) => {
           {{ question.answer }}</dd>
       </dl>
     </div>
+    <SectionHeading 
+      :heading="'06  FAQ'"
+    />
   </div>
 </template>
 

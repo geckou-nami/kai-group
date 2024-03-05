@@ -41,6 +41,9 @@
         </div>
       </div>
     </div>
+    <SectionHeading 
+      :heading="'05  NEW CHOICES'"
+    />
   </div>
 </template>
 

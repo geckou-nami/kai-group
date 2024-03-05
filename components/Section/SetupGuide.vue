@@ -18,6 +18,9 @@
         allowfullscreen 
       />
     </div>
+    <SectionHeading 
+      :heading="'04  HOW TO SET UP'"
+    />
   </div>
 </template>
 

@@ -30,12 +30,14 @@
   width:50%;
   overflow: hidden;
   position:absolute;
-    top:0;
-    left:0;
+  top:0;
+  left:0;
+  /* animation: img-wrap 2s cubic-bezier(0.4, 0, 0.2, 1) infinite; */
 
   &::before {
     animation: img-wrap 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-    background: #fff;
+    background-image: url(assets/images/sld-1-pc-l.jpg);
+    /* background-size: contain; */
     content: '';
     inset: 0;
     pointer-events: none;
