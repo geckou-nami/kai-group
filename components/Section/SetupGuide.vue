@@ -3,33 +3,41 @@
 </script>
 
 <template>
-  <div :class="$style.setup_guide_container">
-    <h3 :class="$style.heading_jp">
-      紙カミソリの組み立て方
-    </h3>
-    <div :class="$style.setup_guide_content">
-      <iframe 
-        width="640" 
-        height="360" 
-        src="https://www.youtube.com/embed/rLRmlY7seko?si=UrfLjd9mxQWhDvB9" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen 
-      />
+  <SectionContainer
+    :heading="'04  HOW TO SET UP'"
+  >
+    <div :class="$style.setup_guide_container">
+      <div :class="$style.setup_guid_contents">
+        <h3 :class="$style.heading_jp">
+          紙カミソリの組み立て方
+        </h3>
+        <div :class="$style.setup_guide_content">
+          <iframe 
+            width="640" 
+            height="360" 
+            src="https://www.youtube.com/embed/rLRmlY7seko?si=UrfLjd9mxQWhDvB9" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen 
+          />
+        </div>
+      </div>
     </div>
-    <SectionHeading 
-      :heading="'04  HOW TO SET UP'"
-    />
-  </div>
+  </SectionContainer>
 </template>
 
 <style lang = "scss" module>
 .setup_guide_container {
-  max-width       : 760px;
+  width           : 100%;
   height          : 100vh;
   background-color: var(--white);
   padding         : calc(var(--sp-large) * 4) 0;
+  position: relative;
+}
+
+.setup_guid_contents {
+  max-width       : 830px;
   margin          : 0 auto;
 }
 

@@ -24,38 +24,39 @@ const limitedArticles = computed(() => {
 </script>
 
 <template>
-  <div :class="$style.news_container">
-    <h3 :class="$style.heading_jp">
-      ニュース
-    </h3>
-    <div :class="$style.article_wrapper">
-      <ul
-        v-for="article in limitedArticles"
-        :key="article.title"
-      >
-        <div :class="$style.article_img">
-          <img 
-            :src="`images/news/${article.image}`"
-            :alt="article.title"
-          >
-        </div>
-        <li>{{ article.title }}</li>
-        <img 
-          src="assets/images/wipo-icon.png"
-          alt="link"
-          :class="$style.link_icon"
+  <SectionContainer
+    :heading="'03  NEWS'"
+  >
+    <div :class="$style.news_container">
+      <h3 :class="$style.heading_jp">
+        ニュース
+      </h3>
+      <div :class="$style.article_wrapper">
+        <ul
+          v-for="article in limitedArticles"
+          :key="article.title"
         >
-      </ul>
+          <div :class="$style.article_img">
+            <img 
+              :src="`images/news/${article.image}`"
+              :alt="article.title"
+            >
+          </div>
+          <li>{{ article.title }}</li>
+          <img 
+            src="assets/images/wipo-icon.png"
+            alt="link"
+            :class="$style.link_icon"
+          >
+        </ul>
+      </div>
+      <LinkButton
+        v-if="showButton"
+        :class="$style.link_button"
+        @click="showAllArticles"
+      />
     </div>
-    <LinkButton
-      v-if="showButton"
-      :class="$style.link_button"
-      @click="showAllArticles"
-    />
-    <SectionHeading 
-      :heading="'03  NEWS'"
-    />
-  </div>
+  </SectionContainer>
 </template>
 
 <style lang = "scss" module>
@@ -66,6 +67,7 @@ const limitedArticles = computed(() => {
   color           : var( --darkgray);
   padding         : calc(var(--sp-large) * 4) 0;
   margin          : 0 auto;
+  position: relative;
 }
 
 .heading_jp {

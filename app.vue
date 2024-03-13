@@ -5,9 +5,8 @@ const articles = await fetch('/json/news.json').then(res => res.json())
 </script>
 
 <template>
+  <!-- <LoadingPage /> -->
   <SectionHero />
-  <!-- <SectionContainer> -->
-  <SectionHeading />
   <SectionPromotion1 />
   <SectionPromotion2 />
   <SectionNews 
@@ -18,7 +17,6 @@ const articles = await fetch('/json/news.json').then(res => res.json())
   <SectionPromotion3 />
   <SectionQuestion />
   <SectionFooter />
-  <!-- </SectionContainer> -->
 </template>
 
 <style lang = "scss" module>

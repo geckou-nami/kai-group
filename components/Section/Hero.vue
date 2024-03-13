@@ -5,7 +5,9 @@
 <template>
   <div :class="$style.hero_container">
     <div :class="$style.hero_title_wrapper">
-      <h2 :class="$style.hero_title">
+      <h2 
+        :class="$style.hero_title"
+      >
         剃るまえから、<br>心地いい。
       </h2>
       <p :class="$style.hero_lead_sentence">

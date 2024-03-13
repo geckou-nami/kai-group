@@ -26,65 +26,72 @@ const questions = [
   },
 ]
 
-// 各質問の表示状態を管理するオブジェクト
-const isActive = reactive(questions.reduce((acc, question, index) => {
+// インデックス署名を持つオブジェクトの型を指定
+const isActive: Record<number, boolean> = reactive(questions.reduce<Record<number, boolean>>((acc, question, index) => {
   acc[index] = false;
   return acc;
 }, {}));
 
 // 特定の質問の表示状態を切り替える
-const toggleMenu = (index) => {
+const toggleMenu = (index: number) => {
   isActive[index] = !isActive[index];
 }
 </script>
 
 <template>
-  <div :class="$style.question_container">
-    <h3 :class="$style.heading_jp">
-      よくあるご質問
-    </h3>
-    <div :class="$style.question_content">
-      <dl
-        v-for="(question, index) in questions"
-        :key="question.question"
-        :class="$style.question_list"
-      >
-        <div 
-          :class="$style.question_header"
-          @click="() => toggleMenu(index)"
-        >
-          <dt>{{ question.question }}</dt>
-          <span :class="$style.open_button">
-            <img 
-              src="~assets/images/qa-icon-plus.png" 
-              alt="click"
-              :class="[$style.open, isActive[index] ? $style.active : '']"
+  <SectionContainer
+    :heading="'06  FAQ'"
+  >
+    <div :class="$style.question_container">
+      <div :class="$style.question_contents">
+        <h3 :class="$style.heading_jp">
+          よくあるご質問
+        </h3>
+        <div :class="$style.question_content">
+          <dl
+            v-for="(question, index) in questions"
+            :key="question.question"
+            :class="$style.question_list"
+          >
+            <div 
+              :class="$style.question_header"
+              @click="() => toggleMenu(index)"
             >
-            <img 
-              src="~assets/images/qa-icon-minus.png"
-              alt="click"
-              :class="[$style.close, isActive[index] ? $style.active : '']"
+              <dt>{{ question.question }}</dt>
+              <span :class="$style.open_button">
+                <img 
+                  src="~assets/images/qa-icon-plus.png" 
+                  alt="click"
+                  :class="[$style.open, isActive[index] ? $style.active : '']"
+                >
+                <img 
+                  src="~assets/images/qa-icon-minus.png"
+                  alt="click"
+                  :class="[$style.close, isActive[index] ? $style.active : '']"
+                >
+              </span>
+            </div>
+            <dd 
+              :class="isActive[index] ? $style.active : ''"
             >
-          </span>
+              {{ question.answer }}</dd>
+          </dl>
         </div>
-        <dd 
-          :class="isActive[index] ? $style.active : ''"
-        >
-          {{ question.answer }}</dd>
-      </dl>
+      </div>
     </div>
-    <SectionHeading 
-      :heading="'06  FAQ'"
-    />
-  </div>
+  </SectionContainer>
 </template>
 
 <style lang = "scss" module>
 .question_container {
-  max-width       : 760px;
+  width           : 100%;
   height          : 100vh;
   background-color: var(--white);
   padding         : calc(var(--sp-large) * 4) 0;
+}
+
+.question_contents {
+  max-width       : 830px;
   margin          : 0 auto;
 }
 

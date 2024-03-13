@@ -3,49 +3,50 @@
 </script> -->
 
 <template>
-  <div :class="$style.promotion1_container">
-    <div :class="$style.promotion1_img">
-      <img 
-        src="assets/images/sec1-img.jpg"
-        alt="イメージ画像"
-      >
-    </div>
-    <div :class="$style.section_contents">
-      <h2 
-        class="heading_en"
-        :class="$style.heading_wrapper"
-      >
-        PLASTIC<br>TO<br>PAPER
-      </h2>
-      <div :class="$style.text_wrapper">
-        <h2 class="heading_jp">
-          プラスチックから<br>「紙」へシフト。
+  <SectionContainer
+    :heading="'01 PLASTIC TO PAPER'"
+  >
+    <div :class="$style.promotion1_container">
+      <div :class="$style.promotion1_img">
+        <img 
+          src="assets/images/sec1-img.jpg"
+          alt="イメージ画像"
+        >
+      </div>
+      <div :class="$style.section_contents">
+        <h2 
+          class="heading_en"
+          :class="$style.heading_wrapper"
+        >
+          PLASTIC<br>TO<br>PAPER
         </h2>
-        <p class="lead_sentence">
-          ・カミソリを脱プラスチックなアイテムへ<br>
-          ・使い切りだからいつでも清潔で快適<br>
-          ・本体薄さ3mmで薄くて軽いから、、手軽に持ち運びできます。
-        </p>
-        <div class="text_content">
-          <p class="section_text">
-            ハンドルに紙、刃体（ヘッド部含む）に金属を使用し、“脱プラスチック※”を実現。
-            モノづくりを通してできるエコな取り組みのひとつとして、プラスチック排出量を
-            減らすための一助になればと考えています。折り紙のように、一枚の紙を組み立て
-            て使う約3mmの薄型の本体は、重さ約4gと超軽量。薄くて軽いから、バッグにサッ
-            と入れて、手軽に持ち運べます。紙の材質には、耐水性と剃る時の安定感を兼ね備
-            え、組み立てやすい程よい厚みのものを厳選しました。1回使い切りなので、細菌の
-            繁殖やサビの心配がなく、いつでも清潔で快適に使用できます。
+        <div :class="$style.text_wrapper">
+          <h2 class="heading_jp">
+            プラスチックから<br>「紙」へシフト。
+          </h2>
+          <p class="lead_sentence">
+            ・カミソリを脱プラスチックなアイテムへ<br>
+            ・使い切りだからいつでも清潔で快適<br>
+            ・本体薄さ3mmで薄くて軽いから、、手軽に持ち運びできます。
+          </p>
+          <div class="text_content">
+            <p class="section_text">
+              ハンドルに紙、刃体（ヘッド部含む）に金属を使用し、“脱プラスチック※”を実現。
+              モノづくりを通してできるエコな取り組みのひとつとして、プラスチック排出量を
+              減らすための一助になればと考えています。折り紙のように、一枚の紙を組み立て
+              て使う約3mmの薄型の本体は、重さ約4gと超軽量。薄くて軽いから、バッグにサッ
+              と入れて、手軽に持ち運べます。紙の材質には、耐水性と剃る時の安定感を兼ね備
+              え、組み立てやすい程よい厚みのものを厳選しました。1回使い切りなので、細菌の
+              繁殖やサビの心配がなく、いつでも清潔で快適に使用できます。
+            </p>
+          </div>
+          <p class="info_text">
+            ※ 当社製3枚刃カミソリとの比較で98%のプラスチック部分を削減
           </p>
         </div>
-        <p class="info_text">
-          ※ 当社製3枚刃カミソリとの比較で98%のプラスチック部分を削減
-        </p>
       </div>
     </div>
-    <SectionHeading 
-      :heading="'01 PLASTIC TO PAPER'"
-    />
-  </div>
+  </SectionContainer>
 </template>
 
 <style lang = "scss" module>
@@ -53,6 +54,7 @@
   width           : 100%;
   height: 100%;
   background-color: var(--gray);
+  /* padding: 0 70px; */
   position        : relative;
   overflow: hidden;
 }
