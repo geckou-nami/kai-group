@@ -1,11 +1,8 @@
 
 $breakpoint: (
   mobile : 'screen and (max-width: 800px)',
-  tablet : 'screen and (max-width: 1024px)',
-  // desktop: 'screen and (min-width: 1024px)'
+  tablet : 'screen and (max-width: 1024px)'
 );
-
-
 
 @mixin mediaScreen($bp) {
   @media #{map-get($breakpoint, $bp)} {

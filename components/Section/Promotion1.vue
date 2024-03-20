@@ -1,6 +1,9 @@
-<!-- <script setup lang="ts">
+<script setup lang="ts">
+const props = defineProps <{
+  isActive : boolean
+}>();
 
-</script> -->
+</script>
 
 <template>
   <SectionContainer
@@ -20,7 +23,9 @@
         >
           PLASTIC<br>TO<br>PAPER
         </h2>
-        <div :class="$style.text_wrapper">
+        <div 
+          :class="[$style.text_wrapper, isActive ? $style.active : '']"
+        >
           <h2 class="heading_jp">
             プラスチックから<br>「紙」へシフト。
           </h2>
@@ -50,13 +55,16 @@
 </template>
 
 <style lang = "scss" module>
+@use '~/assets/scss/mixin' as *;
+
 .promotion1_container {
-  width           : 100%;
-  height: 100%;
+  max-width       : var(--section-max-width);
+  height          : 100%;
   background-color: var(--gray);
-  /* padding: 0 70px; */
+  padding         : 0 70px;
+  margin          : 0 auto;
   position        : relative;
-  overflow: hidden;
+  overflow        : hidden;
 }
 
 .promotion1_img {
@@ -92,5 +100,9 @@
   right         : 0;
   padding-bottom: calc(var(--sp-large) * 4);
   padding-right : calc(var(--sp-large) * 4);
+
+  &.active {
+    color:red;
+  }
 }
 </style>

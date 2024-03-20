@@ -19,9 +19,8 @@ const props = defineProps <{
   z-index: var(--z-index-nav);
 
   h2 {
-  font-size: var(--fs-smaller);
-  color    : var(--darkgray);
-  transform: rotate(90deg);
-  }
+    font-size: var(--fs-smaller);
+    color    : var(--darkgray);
+    }
 }
 </style>

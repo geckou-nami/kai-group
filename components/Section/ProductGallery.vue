@@ -47,7 +47,7 @@
   position: relative;
 
   &::after {
-    animation       : img-down-1 4s infinite;
+    /* animation       : img-down-1 4s infinite; */
     background-image: url(assets/images/sld-2-pc-l.jpg);
     background-size : cover;
     content         : '';
@@ -59,10 +59,9 @@
 .image_right {
   width   : 100%;
   position: relative;
-    /* background-color: pink; */
 
   &::after {
-    animation       : img-down-2 4s infinite;
+    /* animation       : img-down-2 4s infinite; */
     background-image: url(assets/images/sld-1-pc-r.jpg);
     background-size : cover;
     content         : '';

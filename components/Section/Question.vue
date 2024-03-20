@@ -36,6 +36,10 @@ const isActive: Record<number, boolean> = reactive(questions.reduce<Record<numbe
 const toggleMenu = (index: number) => {
   isActive[index] = !isActive[index];
 }
+
+const props = defineProps <{
+  isActive: boolean
+}>();
 </script>
 
 <template>
@@ -44,7 +48,9 @@ const toggleMenu = (index: number) => {
   >
     <div :class="$style.question_container">
       <div :class="$style.question_contents">
-        <h3 :class="$style.heading_jp">
+        <h3 
+          :class="[$style.heading_jp, isActive ? $style.active :'']"
+        >
           よくあるご質問
         </h3>
         <div :class="$style.question_content">
@@ -87,7 +93,7 @@ const toggleMenu = (index: number) => {
   width           : 100%;
   height          : 100vh;
   background-color: var(--white);
-  padding         : calc(var(--sp-large) * 4) 0;
+  padding         : calc(var(--sp-large) * 4) 70px;
 }
 
 .question_contents {
@@ -101,6 +107,10 @@ const toggleMenu = (index: number) => {
   line-height   : var(--line-height-narrow);
   color         : var( --darkgray);
   text-align    : center;
+
+  &.active {
+    color:red;
+  }
 }
 
 .question_content {

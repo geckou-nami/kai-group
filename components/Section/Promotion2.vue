@@ -1,6 +1,9 @@
-<!-- <script setup lang="ts">
+<script setup lang="ts">
+const props = defineProps <{
+  isActive : boolean
+}>();
 
-</script> -->
+</script>
 
 <template>
   <SectionContainer
@@ -20,7 +23,9 @@
         >
           GENDER<br>FREE<br>DESIGN
         </h2>
-        <div :class="$style.text_wrapper">
+        <div 
+          :class="[$style.text_wrapper, isActive ? $style.active : '']"
+        >
           <h2 class="heading_jp">
             ジェンダーフリーな<br>デザイン。
           </h2>
@@ -51,7 +56,7 @@
   position        : relative;
   overflow        : hidden;
   background-color: var(--lightblue);
-  /* padding: 0 70px; */
+  padding: 0 70px;
 }
 
 .promotion2_img {
@@ -85,6 +90,10 @@
   bottom        : 0;
   padding-bottom: calc(var(--sp-large) * 4);
   padding-right : calc(var(--sp-large) * 4);
+
+  &.active {
+    color:red;
+  }
 }
 
 .section_heading {

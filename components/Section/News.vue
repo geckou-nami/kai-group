@@ -1,9 +1,11 @@
 <script setup lang="ts">
+
 const props = defineProps<{
   articles: {
     image: string
     title: string
   }[];
+  isActive: boolean
 }>();
 
 // 表示される記事の最大数を管理するリアクティブなプロパティ
@@ -28,7 +30,9 @@ const limitedArticles = computed(() => {
     :heading="'03  NEWS'"
   >
     <div :class="$style.news_container">
-      <h3 :class="$style.heading_jp">
+      <h3 
+        :class="[$style.heading_jp, isActive ? $style.active :'']"
+      >
         ニュース
       </h3>
       <div :class="$style.article_wrapper">
@@ -65,7 +69,7 @@ const limitedArticles = computed(() => {
   height          : 100%;
   background-color: var(--lightgray);
   color           : var( --darkgray);
-  padding         : calc(var(--sp-large) * 4) 0;
+  padding         : calc(var(--sp-large) * 4) 70px;
   margin          : 0 auto;
   position: relative;
 }
@@ -75,6 +79,10 @@ const limitedArticles = computed(() => {
   letter-spacing: var(--letter-spacing-normal);
   line-height   : var(--line-height-narrow);
   text-align    : center;
+
+  &.active {
+    color:red;
+  }
 }
 
 .article_wrapper  {

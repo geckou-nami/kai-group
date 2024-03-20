@@ -1,6 +1,9 @@
-<!-- <script setup lang="ts">
+<script setup lang="ts">
+const props = defineProps <{
+  isActive : boolean
+}>();
 
-</script> -->
+</script>
 
 <template>
   <SectionContainer
@@ -20,7 +23,9 @@
         >
           NEW<br>CHOICES
         </h2>
-        <div :class="$style.text_wrapper">
+        <div
+          :class="[$style.text_wrapper, isActive ? $style.active : '']"
+        >
           <p class="lead_sentence">
             より良い未来のためになる、<br>
             <span>
@@ -54,7 +59,7 @@
   height          : 100%;
   overflow        : hidden;
   background-color: var(--gray);
-  /* padding         : 0 70px; */
+  padding         : 0 70px;
   position        : relative;
 }
 
@@ -89,5 +94,9 @@
   bottom        : 0;
   padding-bottom: calc(var(--sp-large) * 4);
   padding-right : calc(var(--sp-large) * 4);
+
+  &.active {
+    color:red;
+  }
 }
 </style>
