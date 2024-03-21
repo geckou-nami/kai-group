@@ -16,7 +16,7 @@ onMounted(() => {
         const characters = [...text]; // スプレッド構文で文字列を配列に変換
         return characters.map((char, charIndex) => {
           const delay = (index + charIndex) * 0.1; // 遅延を計算
-          return `<span style="animation-delay: ${delay}s;">${char}</span>`;
+          return `<span class="${$style.outer_span}"><span style="animation-delay: ${delay}s;">${char}</span></span>`;
         }).join('');
       } else if (node.nodeType === Node.ELEMENT_NODE && node.nodeName === 'BR') {
         // <br>タグの場合はそのまま返す
@@ -137,11 +137,14 @@ onMounted(() => {
   line-height   : var(--line-height-narrow);
   margin-bottom : var(--sp-larger);
 
-
   span {
     opacity: 0;
     animation:text_anime_on 1s ease-out forwards;
   }
+}
+
+.outer_span {
+  overflow: hidden;
 }
 
 @keyframes text_anime_on {
