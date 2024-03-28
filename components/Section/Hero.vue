@@ -16,7 +16,7 @@ onMounted(() => {
         const characters = [...text]; // スプレッド構文で文字列を配列に変換
         return characters.map((char, charIndex) => {
           const delay = (index + charIndex) * 0.1; // 遅延を計算
-          return `<span style="animation-delay: ${delay}s;">${char}</span>`;
+          return `<span style="overflow: hidden;"><span style="animation-delay: ${delay}s;">${char}</span></span>`;
         }).join('');
       } else if (node.nodeType === Node.ELEMENT_NODE && node.nodeName === 'BR') {
         // <br>タグの場合はそのまま返す
@@ -90,17 +90,11 @@ onMounted(() => {
 }
 
 .hero_bg {
-  width:100%;
-  height:210%;
-  position: relative;
-  pointer-events: none;
 
   > img {
-    position:fixed;
-    /* width:100%; */
-    width:2000px;
-    top     : 0;
-    left    : 0;
+    position: fixed;
+    top  : 0;
+    z-index: -1;
   }
 }
 
@@ -140,25 +134,14 @@ onMounted(() => {
 
   span {
     opacity: 0;
-    animation:text_anime_on 1s ease-out forwards;
-  }
-}
-
-@keyframes text_anime_on {
-  0% {
-    opacity:0;
-    transform: translateY(100%);
-  }
-  100% {
-    opacity:1;
-    transform: translateY(0);
+    animation:text_anime 1s ease-out forwards;
   }
 }
 
 .hero_lead_sentence {
   font-size  : var(--fs-hero-lead);
   font-weight: bold;
-  animation:small_text_anime_on 1s ease-out forwards;
+  animation:text_anime 1s ease-out forwards;
   animation-delay: 1s;
   opacity: 0;
 }
@@ -167,7 +150,7 @@ onMounted(() => {
   font-size    : var(--fs-hero-heading);
   font-weight  : bold;
   margin-bottom: var(--sp-medium);
-  animation:small_text_anime_on 1s ease-out forwards;
+  animation:text_anime 1s ease-out forwards;
   animation-delay: 1.2s;
   opacity: 0;
 }
@@ -176,13 +159,13 @@ onMounted(() => {
   p {
     font-size    : var(--fs-hero-text);
     margin-bottom: var(--sp-medium);
-    animation:small_text_anime_on 1s ease-out forwards;
+    animation:text_anime 1s ease-out forwards;
     animation-delay: 1.5s;
     opacity: 0;
   }
 }
 
-@keyframes small_text_anime_on {
+@keyframes text_anime {
   0% {
     opacity:0;
     transform: translateY(100%);

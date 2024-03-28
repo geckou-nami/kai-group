@@ -30,11 +30,13 @@ const limitedArticles = computed(() => {
     :heading="'03  NEWS'"
   >
     <div :class="$style.news_container">
-      <h3 
-        :class="[$style.heading_jp, isActive ? $style.active :'']"
-      >
-        ニュース
-      </h3>
+      <span :class="$style.anime_wrap">
+        <h3 
+          :class="[$style.heading_jp, isActive ? $style.active :'']"
+        >
+          ニュース
+        </h3>
+      </span>
       <div :class="$style.article_wrapper">
         <ul
           v-for="article in limitedArticles"
@@ -78,11 +80,16 @@ const limitedArticles = computed(() => {
   font-size     : var(--fs-heading-jp);
   letter-spacing: var(--letter-spacing-normal);
   line-height   : var(--line-height-narrow);
-  text-align    : center;
-
+  
   &.active {
-    color:red;
+    animation:text_anime 1s ease-out forwards;
   }
+}
+
+.anime_wrap {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .article_wrapper  {
@@ -113,5 +120,16 @@ ul {
 
 .link_button {
   margin: 0 auto;
+}
+
+@keyframes text_anime {
+  0% {
+    opacity:0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity:1;
+    transform: translateY(0);
+  }
 }
 </style>

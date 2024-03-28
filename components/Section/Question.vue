@@ -48,11 +48,13 @@ const props = defineProps <{
   >
     <div :class="$style.question_container">
       <div :class="$style.question_contents">
-        <h3 
-          :class="[$style.heading_jp, isActive ? $style.active :'']"
-        >
-          よくあるご質問
-        </h3>
+        <span :class="$style.anime_wrap">
+          <h3 
+            :class="[$style.heading_jp, isActive ? $style.active :'']"
+          >
+            よくあるご質問
+          </h3>
+        </span>
         <div :class="$style.question_content">
           <dl
             v-for="(question, index) in questions"
@@ -109,8 +111,14 @@ const props = defineProps <{
   text-align    : center;
 
   &.active {
-    color:red;
+    animation:text_anime 1s ease-out forwards;
   }
+}
+
+.anime_wrap {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .question_content {
@@ -165,6 +173,17 @@ const props = defineProps <{
 
   &.active {
     display: block;
+  }
+}
+
+@keyframes text_anime {
+  0% {
+    opacity:0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity:1;
+    transform: translateY(0);
   }
 }
 </style>

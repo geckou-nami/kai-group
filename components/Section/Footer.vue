@@ -1,6 +1,6 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 
-</script>
+</script> -->
 
 <template>
   <div :class="$style.footer_container">
@@ -34,34 +34,48 @@
 </template>
 
 <style lang = "scss" module>
+@use '~/assets/scss/mixin' as *;
+
 .footer_container {
   background-color: var(--white);
-  width:100%;
-  padding: calc(var(--sp-large) * 3) 0;
+  width           : 100%;
+  padding         : calc(var(--sp-large) * 3) 0;
+  display        : flex;
+  flex-direction: column;
+  align-items    : center;
+  justify-content: center;
 }
 
 .footer_img_wrapper {
-  width:100%;
-  display: flex;
+  max-width      : var(--section-max-width);
+  display        : flex;
   justify-content: center;
-  gap: var(--sp-medium);
+  gap            : var(--sp-medium);
 
-  >img {
-    width:240px;
+  @include mediaScreen('mobile') {
+    background-color: pink;
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    gap           : var(--sp-large);
   }
+
+  /* >img {
+    width: 100%;
+  } */
 }
 
 .company_logo {
-  width: 80px;
-  margin: 0 auto;
+  width     : 80px;
+  margin    : 0 auto;
   margin-top: calc(var(--sp-large) * 2);
 }
 
 .footer_copy {
-  color: #222222;
-  font-size: var(--fs-smaller);
+  color         : #222222;
+  font-size     : var(--fs-smaller);
   letter-spacing: var(--letter-spacing-narrow);
-  text-align: center;
-  margin-top: calc(var(--sp-large) * .5)
+  text-align    : center;
+  margin-top    : calc(var(--sp-large) * .5)
 }
 </style>

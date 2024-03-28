@@ -26,10 +26,14 @@ const props = defineProps <{
         <div 
           :class="[$style.text_wrapper, isActive ? $style.active : '']"
         >
-          <h2 class="heading_jp">
+          <h2 
+            class="heading_jp"
+          >
             プラスチックから<br>「紙」へシフト。
           </h2>
-          <p class="lead_sentence">
+          <p 
+            class="lead_sentence"
+          >
             ・カミソリを脱プラスチックなアイテムへ<br>
             ・使い切りだからいつでも清潔で快適<br>
             ・本体薄さ3mmで薄くて軽いから、、手軽に持ち運びできます。
@@ -58,7 +62,8 @@ const props = defineProps <{
 @use '~/assets/scss/mixin' as *;
 
 .promotion1_container {
-  max-width       : var(--section-max-width);
+  /* max-width       : var(--section-max-width); */
+  width:100%;
   height          : 100%;
   background-color: var(--gray);
   padding         : 0 70px;
@@ -103,6 +108,18 @@ const props = defineProps <{
 
   &.active {
     color:red;
+    /* animation:text_anime 1s ease-out forwards; */
+  }
+}
+
+@keyframes text_anime {
+  0% {
+    opacity:0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity:1;
+    transform: translateY(0);
   }
 }
 </style>

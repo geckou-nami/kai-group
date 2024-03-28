@@ -11,11 +11,13 @@ const props = defineProps <{
   >
     <div :class="$style.setup_guide_container">
       <div :class="$style.setup_guid_contents">
-        <h3 
-          :class="[$style.heading_jp, isActive ? $style.active :'']"
-        >
-          紙カミソリの組み立て方
-        </h3>
+        <span :class="$style.anime_wrap">
+          <h3 
+            :class="[$style.heading_jp, isActive ? $style.active :'']"
+          >
+            紙カミソリの組み立て方
+          </h3>
+        </span>
         <div :class="$style.setup_guide_content">
           <iframe 
             width="640" 
@@ -54,8 +56,14 @@ color         : var( --darkgray);
 text-align    : center;
 
   &.active {
-    color:red;
+    animation:text_anime 1s ease-out forwards;
   }
+}
+
+.anime_wrap {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .setup_guide_content {
@@ -64,6 +72,17 @@ text-align    : center;
 
   iframe {
     margin: 0 auto;
+  }
+}
+
+@keyframes text_anime {
+  0% {
+    opacity:0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity:1;
+    transform: translateY(0);
   }
 }
 </style>

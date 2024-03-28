@@ -32,9 +32,9 @@ const observer = new IntersectionObserver(entries => {
 <template>
   <!-- <LoadingPage /> -->
   <section>
-    <SectionHero 
+    <!-- <SectionHero 
       id="sectionHero"
-    />
+    /> -->
     <SectionPromotion1 
       id="sectionPromotion1"
       :isActive="currentSectionId === 'sectionPromotion1'"
@@ -48,13 +48,13 @@ const observer = new IntersectionObserver(entries => {
       :articles="articles"
       :isActive="currentSectionId === 'sectionNews'"
     />
-    <SectionSetupGuide 
+    <!-- <SectionSetupGuide 
       id="sectionSetupGuide"
       :isActive="currentSectionId === 'sectionSetupGuide'"
-    />
-    <ProductGallery 
+    /> -->
+    <!-- <ProductGallery 
       id="productGallery"
-    />
+    /> -->
     <SectionPromotion3 
       id="sectionPromotion3"
       :isActive="currentSectionId === 'sectionPromotion3'"

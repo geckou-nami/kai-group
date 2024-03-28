@@ -59,6 +59,8 @@
   --z-index-nav: 70;
   --z-index-header: 60;
   --z-index-contents: 50;
+  --section-max-width: 1070px;
+  --hero-max-width: 1054px;
 }
 
 html {
@@ -121,6 +123,27 @@ body {
        column-width: 200px;
 }
 
+@-webkit-keyframes text_anime {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes text_anime {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 p {
   margin: 0;
   padding: 0;
